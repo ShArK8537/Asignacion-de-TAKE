@@ -369,17 +369,19 @@
 
     // SOMNIS Season 2 allocation by rank function
     function getS2Allocation(rank) {
-      if (rank === 1) return 150000;
-      if (rank === 2) return 100000;
-      if (rank === 3) return 70000;
-      if (rank <= 10) return 25000;
-      if (rank <= 20) return 10000;
-      if (rank <= 50) return 5000;
-      if (rank <= 100) return 2000;
-      if (rank <= 200) return 1000;
-      if (rank <= 500) return 500;
-      if (rank <= 1000) return 200;
-      return 0;
+    rank = parseInt(rank);
+    if (isNaN(rank) || rank <= 0) return 0;
+    if (rank === 1) return 150000;
+    if (rank === 2) return 100000;
+    if (rank === 3) return 70000;
+    if (rank <= 10) return 25000;
+    if (rank <= 20) return 10000;
+    if (rank <= 50) return 5000;
+    if (rank <= 100) return 2000;
+    if (rank <= 200) return 1000;
+    if (rank <= 500) return 500;
+    if (rank <= 1000) return 200;
+    return 0;
     }
 
     // Initialize tier dropdowns for Somnis & GG:S pools
